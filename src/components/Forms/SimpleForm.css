@@ -1,0 +1,44 @@
+.simple-form {
+  position: absolute;
+  top: 110px;
+  right: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+  width: 300px;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.33);
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0px 8px 32px 0 rgba(99, 99, 179, 0.822);
+}
+
+.simple-form label {
+  font-weight: bold;
+  color: black;
+}
+
+.simple-form input {
+  padding: 10px;
+  border: 1.4px solid rgba(46, 46, 46, 0.594);
+  border-radius: 12px;
+}
+
+.simple-form input::placeholder {
+  color: rgba(181, 61, 61, 0.995); /* Color for placeholder text */
+}
+
+.simple-form .SimpleFormButton  {
+  padding: 10px;
+  background-color: #68a8d3;
+  color: black;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.simple-form .SimpleFormButton:hover {
+  background-color: #2980b9;
+}

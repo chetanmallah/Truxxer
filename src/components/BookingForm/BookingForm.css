@@ -1,0 +1,310 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f5; /* Light Grey Background */
+  color: #212529; /* Dark Grey */
+}
+
+/* Ensure the form fields are consistent */
+input[type="tel"].full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Toast Message Styling */
+.toast-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #f5f5dc; /* Cream color */
+  color: #333;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toast-message p {
+  margin: 0;
+  padding-right: 10px;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px; /* Add padding to create space at the top and bottom */
+  box-sizing: border-box; /* Ensure padding is included in the height calculation */
+}
+
+.card {
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4); /* Increased intensity of shadow */
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+  }
+}
+
+/* Left section styles */
+.left-section {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  border: 2px solid #6C757D; /* Grey */
+  border-radius: 12px;
+  max-height: 600px;
+  background-color: #e3f2fd; /* Light Blue */
+  margin-right: 20px; /* Add margin to the right */
+}
+
+.offer-title {
+  margin-bottom: 10px;
+  color: #007BFF; /* Blue */
+}
+
+.stack-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stack {
+  display: flex;
+  align-items: center;
+  position: relative; /* Add relative positioning */
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid #6C757D; /* Grey */
+  border-radius: 12px;
+  background-color: #fff;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.stack:hover,
+.stack:focus {
+  background-color: #E9ECEF; /* Slightly darker grey */
+  border-color: #007BFF; /* Blue */
+  outline: none; /* Remove default focus outline */
+}
+
+.stack:focus .top-right-container,
+.stack:focus .vehicle-price {
+  color: #000d1bf0; /* Change text color to blue when focused */
+}
+
+.stack:focus .top-right-container,
+.stack:focus .vehicle-name {
+  color: #010509;
+}
+
+.top-right-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(31, 29, 29, 0.616);
+}
+
+.weight-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #16191b; /* Grey */
+  margin-left: 5px;
+}
+
+.stack-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px; /* Add padding to the left */
+  flex: 1;
+}
+
+.vehicle-name,
+.vehicle-price {
+  margin: 5px 0; /* Add margin above and below */
+}
+
+.vehicle-name {
+  color: #191a27c0;
+  font-weight:1000; /* Blue */
+}
+
+.vehicle-price {
+  color: #410ba7; /* Green */
+  font-weight: bold;
+}
+
+/* Right section styles */
+.right-section {
+  flex: 1;
+  padding: 20px;
+  border: 2px solid #6C757D; /* Grey */
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #007BFF; /* Blue */
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container form input,
+.form-container form button {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #6C757D; /* Grey */
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding is included in the height calculation */
+}
+
+.form-container form input:focus {
+  border-color: #007BFF; /* Blue */
+}
+
+.form-container form button {
+  background-color: #007BFF; /* Blue */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container form button:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+/* Date input styling */
+input[type="date"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px;
+  border: 1px solid #6C757D; /* Grey */
+  border-radius: 5px;
+  background-color: #fff;
+  color: #495057;
+  font-size: 16px;
+}
+
+input[type="date"]:before {
+  content: attr(placeholder);
+  color: #6c757d;
+  margin-right: 0.5em;
+}
+
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: '';
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: block;
+  margin-right: 10px;
+  color: #6C757D;
+}
+
+input[type="date"]:focus {
+  border-color: #007BFF; /* Blue */
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 767px) {
+  .container {
+    padding: 20px 10px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .left-section,
+  .right-section {
+    margin-right: 0;
+    margin-bottom: 20px;
+    max-height: none;
+  }
+
+  .left-section {
+    background-color: #e3f2fd; /* Light Blue */
+  }
+
+  .stack-container {
+    gap: 10px;
+  }
+
+  .stack {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .stack-info {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  .top-right-container {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .form-container form input,
+  .form-container form button {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  input[type="date"] {
+    padding: 10px;
+    border: 1px solid #6C757D; /* Grey */
+    border-radius: 5px;
+    background-color: #fff;
+    color: #495057;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  input[type="date"]:before {
+    content: 'mm/dd/yyyy';
+    color: #6c757d;
+    margin-right: 0.5em;
+  }
+}

@@ -1,0 +1,113 @@
+/* Container for the entire control component */
+.control-container {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children in a column */
+  align-items: center; /* Center items horizontally */
+  padding: 20px; /* Padding around the container */
+  background-color: #f5f5f5; /* Light grey background */
+}
+
+/* Container for the main content */
+.control-content {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Space out items horizontally */
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Max width for the content */
+}
+
+/* Style for the control image */
+.control-image {
+  width: 40%; /* Smaller width for the image */
+  max-width: 500px; /* Max width for the image */
+  margin-right: 20px; /* Margin to the right of the image */
+}
+
+/* Container for the text content */
+.control-text {
+  padding: 20px; /* Padding around the text */
+  text-align: left; /* Align text to the left */
+}
+
+/* Style for the heading */
+.control-text h1 {
+  font-size: 2em; /* Large font size */
+  color: #1a237e; /* Dark navy blue color */
+}
+
+/* Style for the paragraph */
+.control-text p {
+  margin: 20px 0; /* Vertical margin */
+  color: #333; /* Dark grey color */
+}
+
+/* Container for the features */
+.control-features {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out items horizontally */
+  margin-top: 20px; /* Margin at the top of the features section */
+  flex-wrap: wrap; /* Allow wrapping of items */
+}
+
+/* Style for each feature */
+.feature {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children in a column */
+  align-items: center; /* Center items horizontally */
+  margin: 0 10px; /* Horizontal margin */
+  flex: 1 1 calc(50% - 20px); /* Flex-basis to allow two items per row */
+  margin-bottom: 20px; /* Add some space between rows */
+}
+
+/* Style for the feature icons */
+.feature-icon {
+  width: 70px; /* Increased width for the icons */
+  height: 70px; /* Increased height for the icons */
+  margin-bottom: 10px; /* Margin at the bottom of the icons */
+  filter: invert(13%) sepia(96%) saturate(7400%) hue-rotate(235deg) brightness(83%) contrast(118%); /* Dark navy blue color */
+  background: transparent;
+}
+
+/* Style for the feature text */
+.feature p {
+  font-size: 1em; /* Standard font size */
+  color: #1a237e; /* Dark navy blue color */
+  text-align: center; /* Center align the text */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .control-content {
+      flex-direction: column; /* Stack the content vertically */
+      align-items: center; /* Center align the items */
+  }
+  .control-image {
+      width: 80%; /* Increase the width of the image */
+      margin: 0 0 20px 0; /* Remove right margin and add bottom margin */
+  }
+  .control-text {
+      padding: 10px; /* Reduce padding around the text */
+      text-align: center; /* Center align the text */
+  }
+  .control-text h1 {
+      font-size: 1.5em; /* Reduce font size for the heading */
+  }
+  .control-text p {
+      margin: 10px 0; /* Reduce vertical margin */
+  }
+  .control-features {
+      justify-content: center; /* Center align the features */
+  }
+  .feature {
+      flex: 1 1 45%; /* Two items per row */
+      margin: 10px; /* Add some margin around each feature */
+  }
+  .feature-icon {
+      width: 50px; /* Reduce width of the icons */
+      height: 50px; /* Reduce height of the icons */
+      margin-bottom: 5px; /* Reduce bottom margin */
+  }
+  .feature p {
+      font-size: 0.9em; /* Reduce font size for the feature text */
+  }
+}

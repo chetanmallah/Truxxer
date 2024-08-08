@@ -1,0 +1,152 @@
+/* Define root variables */
+:root {
+  --background-dark: #2c2c2c; /* Dark background color */
+  --text-light: #bfbfbf; /* Light text color */
+  --text-dark: #ffffff; /* Dark text color */
+  --primary-color: #3498db; /* Primary color for highlights */
+  --input-bg: #444444; /* Background color for input fields */
+  --button-bg: #2980b9; /* Background color for buttons */
+  --button-hover-bg: #1abc9c; /* Background color for buttons on hover */
+  --transition: 0.3s; /* Transition duration */
+}
+
+/* Footer styles */
+.Footer {
+  background-color: var(--background-dark); /* Set the background color for the footer */
+  color: var(--text-light); /* Set the text color for the footer */
+  padding: 40px 20px; /* Add padding to the footer */
+  font-size: 14px; /* Set the default font size for the footer */
+}
+
+/* Footer container styles */
+.Footer-container {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow content to wrap */
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+  max-width: 1200px; /* Set maximum width for the footer */
+  margin: 0 auto; /* Center the footer horizontally */
+}
+
+/* Individual section within the footer */
+.Footer-section {
+  flex: 1 1 220px; /* Allow sections to grow, shrink, and have a basis size */
+  margin: 20px; /* Add margin around each section */
+  text-align: left; /* Align text to the left within sections */
+}
+
+/* Heading styles */
+.Footer-title {
+  font-size: 1.7rem; /* Set the font size for headings */
+  margin-bottom: 10px; /* Add spacing below headings */
+  color: var(--text-dark); /* Set the color for headings */
+}
+
+/* Subscribe text styles */
+.Footer-subscribe-text {
+  margin-top: 20px;
+  margin-bottom: 20px; /* Add spacing below the subscribe text */
+  font-size: 1rem;
+}
+
+/* Subscribe form styles */
+.Footer-subscribe-form {
+  display: flex; /* Use flexbox for layout */
+}
+
+/* Input field styles */
+.Footer-input {
+  background-color: var(--input-bg); /* Set the background color for input fields */
+  border: none; /* Remove borders from input fields */
+  padding: 10px; /* Add padding to input fields */
+  color: var(--text-dark); /* Set the text color for input fields */
+  flex: 1; /* Allow input fields to grow within the form */
+}
+
+/* Button styles */
+.Footer-button {
+  background-color: var(--button-bg); /* Set the background color for buttons */
+  border: none; /* Remove borders from buttons */
+  padding: 10px 20px; /* Add padding to buttons */
+  color: var(--text-dark); /* Set the text color for buttons */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: var(--transition); /* Add transition effect */
+  
+}
+
+/* Button hover effect */
+.Footer-button:hover {
+  background-color: var(--button-hover-bg); /* Change background color on hover */
+}
+
+/* List styles */
+.Footer-list {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  
+}
+
+/* Link styles */
+.Footer-link {
+  color: var(--text-light); /* Set the text color for links */
+  text-decoration: none; /* Remove underline from links */
+  display: block; /* Display links as block elements */
+  margin-bottom: 5px; /* Add spacing below links */
+  transition: var(--transition); /* Add transition effect */
+}
+
+/* Hover effect for links */
+.Footer-link:hover {
+  color: var(--primary-color); /* Change text color on hover */
+}
+
+/* Address styles */
+.Footer-address {
+  font-style: normal; /* Use normal font style */
+  line-height: 1.6; /* Set the line height */
+}
+
+/* PAN number styles */
+.Footer-pan {
+  margin-top: 10px; /* Add spacing above PAN number */
+  font-size: 0.9rem; /* Set the font size for PAN number */
+}
+
+/* Social media list styles */
+.Footer-social-list {
+  display: flex; /* Use flexbox for layout */
+  gap: 10px; /* Add spacing between social media icons */
+  margin-top: 20px; /* Add spacing above social media icons */
+}
+
+/* Social media link styles */
+.Footer-social-link {
+  color: var(--text-light); /* Set the text color for social media icons */
+  font-size: 20px; /* Set the font size for social media icons */
+  transition: var(--transition); /* Add transition effect */
+}
+
+/* Hover effect for social media links */
+.Footer-social-link:hover {
+  color: var(--primary-color); /* Change text color on hover */
+}
+
+/* Bottom section styles */
+.Footer-bottom {
+  border-top: 1px solid var(--input-bg); /* Add border on top */
+  padding-top: 20px; /* Add padding on top */
+  
+  text-align: center; /* Align text to the center */
+  font-size: 0.875rem; /* Set the font size */
+  color: var(--text-light); /* Set the text color */
+}
+
+/* Adjustments */
+.Footer-section:nth-child(2) {
+  
+  margin-right: 100px; /* Move Quick Links to the right */
+}
+
+.Footer-section:nth-child(4) {
+  margin-left: 100px; /* Move Contact Us slightly to the right */
+}
