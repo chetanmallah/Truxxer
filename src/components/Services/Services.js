@@ -118,7 +118,7 @@ const Service = () => {
           Explore Our Wide Range of Vehicles to Suit Every Cargo Requirement
           </p>
         </header>
-        <ul className="services-service-list" role="list" aria-labelledby="service">
+        <ul className="services-service-list"  aria-labelledby="service">
           {services.map((service) => (
             <li className="services-service-item" key={service.id}>
               <article className="services-service-card">
